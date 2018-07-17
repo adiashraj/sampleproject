@@ -12,7 +12,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        Map<String,String> map = prepareHashMap();
+        Map<String,String> map = prepareHashMap(false);
         if(map != null) {
         	System.out.println("Map is not null");
         }
@@ -23,8 +23,10 @@ public class App
     /**
      * Memory Leak Issue
      */
-    public static Map<String,String> prepareHashMap() {
-    	Map<String,String> messages = new HashMap<String,String>();
+    public static Map<String,String> prepareHashMap(boolean flag) {
+    	Map<String,String> messages = null;
+    	if(flag)
+    		messages = 	new HashMap<String,String>();
     	for(int i = 0; i <= 10; i++) {
     		messages.put(i + "",i + "");
     	}
