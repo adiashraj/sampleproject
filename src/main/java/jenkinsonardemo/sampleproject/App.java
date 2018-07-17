@@ -12,19 +12,20 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        processHashMap();
+        Map<String,String> map = prepareHashMap();
+        for (Map.Entry<String,String> entry : map.entrySet()) 
+            System.out.println("Key = " + entry.getKey() +
+                             ", Value = " + entry.getValue());
     }
     /**
      * Memory Leak Issue
      */
-    public static void processHashMap() {
+    public static Map<String,String> prepareHashMap() {
     	Map<String,String> messages = new HashMap<String,String>();
     	for(int i = 0; i <= 10; i++) {
     		messages.put(i + "",i + "");
     	}
-    	// processing logic
-    	
-    	// release logic
+    	return messages;
     }
     
 }
