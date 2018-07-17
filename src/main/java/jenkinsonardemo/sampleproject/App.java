@@ -13,6 +13,9 @@ public class App
     {
         System.out.println( "Hello World!" );
         Map<String,String> map = prepareHashMap();
+        if(map != null) {
+        	System.out.println("Map is not null");
+        }
         for (Map.Entry<String,String> entry : map.entrySet()) 
             System.out.println("Key = " + entry.getKey() +
                              ", Value = " + entry.getValue());
