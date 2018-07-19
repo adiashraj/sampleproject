@@ -29,6 +29,9 @@ public class App
     	for(int i = 0; i <= 10; i++) {
     		messages.put(i + "",i + "");
     	}
+    	if(messages == null) {
+    		throw new NullPointerException();
+    	}
     	return messages;
     }
     
