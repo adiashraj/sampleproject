@@ -14,15 +14,14 @@ public class App
         System.out.println( "Hello World!" );
         Map<String,String> map = prepareHashMap(false);
         if(map != null) {
-        	System.out.println("Map is not null");
+    //    	System.out.println("Map is not null");
+        	System.err.println("Map is not null");
         }
         for (Map.Entry<String,String> entry : map.entrySet()) 
             System.out.println("Key = " + entry.getKey() +
                              ", Value = " + entry.getValue());
     }
-    /**
-     * Memory Leak Issue
-     */
+    
     public static Map<String,String> prepareHashMap(boolean flag) {
     	Map<String,String> messages = null;
     	if(flag)
