@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         System.out.println( "Hello World!" );
         Map<String,String> map = prepareHashMap(false);
@@ -22,7 +22,7 @@ public class App
                              ", Value = " + entry.getValue());
     }
     
-    public static Map<String,String> prepareHashMap(boolean flag) {
+    public static Map<String,String> prepareHashMap(boolean flag) throws Exception{
     	Map<String,String> messages = null;
     	if(flag)
     		messages = 	new HashMap<String,String>();
