@@ -13,10 +13,10 @@ public class App
     {
         System.out.println( "Hello World!" );
         Map<String,String> map = prepareHashMap(false);
-        if(map != null) {
+       // if(map != null) {
     //    	System.out.println("Map is not null");
-        	System.err.println("Map is not null");
-        }
+        	//System.err.println("Map is not null");
+        //}
         for (Map.Entry<String,String> entry : map.entrySet()) 
             System.out.println("Key = " + entry.getKey() +
                              ", Value = " + entry.getValue());
